@@ -4,7 +4,7 @@
 - Atmega328 based Flight Controller for fixed wings.
 
 ### Features
-- [ ] PPM
+- [X] PPM
 - [ ] Manual mode
 - [ ] Stabilization mode
 - [ ] Return to home
