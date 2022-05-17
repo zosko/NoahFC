@@ -24,6 +24,7 @@ Arduino | Component
 D2| PPM Input (interrupt)
 D3| NeoSWSerial (GPS) RX
 D4| NeoSWSerial (GPS) TX
+D6| ESC Controller
 SDA| MPU6050
 SCL| MPU6050
 D9| Left Wing Servo
