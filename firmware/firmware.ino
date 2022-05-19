@@ -1,14 +1,16 @@
+#include <Wire.h>
 #include <NMEAGPS.h>
 #include <GPSport.h>
 #include <Streamers.h>
-#include <PPMReader.h> // https://github.com/dimag0g/PPM-reader
-#include <Wire.h>
+#include <PPMReader.h>
 #include <ServoTimer2.h>
 
+//#define DEBUG
+
 // SERVOS
-const int PIN_ALERON  =  9;
+const int PIN_ALERON =  9;
 const int PIN_ELEVATOR =  10;
-const int PIN_THROTTLE   =  11;
+const int PIN_THROTTLE =  11;
 
 ServoTimer2 servoThrottle;
 ServoTimer2 servoElevator;
@@ -33,12 +35,9 @@ const float R2 = 10000.0;
 const int PIN_VOLTAGE = A2;
 
 // GPS
-#ifndef NMEAGPS_INTERRUPT_PROCESSING
-#error You must define NMEAGPS_INTERRUPT_PROCESSING in NMEAGPS_cfg.h!
-#endif
+NeoGPS::Location_t homeLocation;
 static NMEAGPS gps;
 gps_fix fix;
-NeoGPS::Location_t homeLocation;
 float distanceToHome;
 int courseChangeNeeded;
 
@@ -46,8 +45,11 @@ int courseChangeNeeded;
 long loop_timer;
 
 void setup() {
+  #ifdef DEBUG
   Serial.begin(9600);
+  #endif
   Wire.begin();
+
   gpsPort.attachInterrupt(GPSisr);
   gpsPort.begin(9600);
 
@@ -69,7 +71,8 @@ void loop() {
   readGPS();
   readMPU();
   readVoltage();
-
+  debug();
+  
   if (ch5 < 1300) { // Manual
     yAngle = 0;
     xAngle = 0;
@@ -83,6 +86,4 @@ void loop() {
 
   while (micros() - loop_timer < 4000);  //Wait until the loop_timer reaches 4000us (250Hz) before starting the next loop
   loop_timer = micros();
-
-  debug();
 }

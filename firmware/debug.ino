@@ -1,4 +1,5 @@
 void debug() {
+  #ifdef DEBUG
   Serial.print(F(" [PITCH] "));
   Serial.print(yAngle);
   Serial.print(F(" [ROLL] "));
@@ -34,4 +35,5 @@ void debug() {
   Serial.print(F(" [DIR] "));
 
   Serial.println();
+  #endif
 }
