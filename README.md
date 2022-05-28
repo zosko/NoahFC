@@ -1,24 +1,18 @@
 ## [warning] - In Development - [warning]
 
 # NoahFC
-- Atmega328 based Flight Controller for fixed wings.
+- Atmega328 based Flight Controller.
 
 ### Features
-- [ ] PPM
-- [ ] Failsafe
-- [ ] Manual mode
-- [ ] Stabilization mode
-- [ ] Return to home
-- [ ] Low cost
-- [ ] First testflight
-
-### Components
+- [X] PPM
 - [X] GPS
-- [X] Stabilization
-- [X] PPM Input
-- [ ] Voltage Read
+- [ ] Failsafe
+- [X] Manual mode
+- [X] Stable mode
+- [ ] Return to home
+- [X] Low cost
 
-### Pins
+### Used Pins
 Arduino | Component
 ---------|---------
 D2| PPM Input (interrupt)
@@ -32,6 +26,15 @@ D10| Right Wing Servo
 D11| Elevator Servo
 A2| Voltage read
 
+### Free Pins
+Arduino | Type
+---------|---------
+A0| Analog pin
+A1| Analog pin
+A3| Analog pin
+D6| PWM Digital pin
+D13| Digital pin (SCK) 
+D12| Digital pin (MOSI)
 
 ## Scheme
 ![Scheme](images/scheme.png)
