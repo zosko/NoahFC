@@ -21,7 +21,8 @@ int xAngle = 1500;
 int yAngle = 1500;
 
 // PPM
-PPMReader ppm(2, 5); // (InterruptPin, MaxChannels)
+const int PIN_PPM =  9;
+PPMReader ppm(PIN_PPM, 5); // (InterruptPin, MaxChannels)
 unsigned int ch1 = 1500;
 unsigned int ch2 = 1500;
 unsigned int ch3 = 1500;
