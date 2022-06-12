@@ -11,6 +11,7 @@
 - [X] Stable mode
 - [ ] Return to home
 - [X] Low cost
+- [ ] OSD (MAX7456 SPI)
 
 ### Used Pins
 Arduino | Component
