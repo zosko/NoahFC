@@ -62,7 +62,7 @@ For PCB design i will use services from SeeedFusion.
 Seeed Fusion PCB Assembly Service offers one-stop prototyping for PCB manufacture, PCB assembly and as a result they produce superior quality PCBs and Fast Turnkey PCBA from 7 working days. When you prototype with Seeed Fusion, they can definitely provide Free DFA and Free functional tests for you! 
 
 Check out their website to know about their manufacturing capabilities and service.
-https://www.seeedstudio.com/prototype-pcb-assembly.html 
+https://www.seeedstudio.com/pcb-assembly.html
 
 Single PCB|Panel PCB
 ---------|---------
