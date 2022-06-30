@@ -40,12 +40,22 @@ const int PIN_LED_GPS = 5;
 const int PIN_LED_POWER = 7;
 
 // GPS
+enum navigation_turn {
+  DO_NOTHING,
+  ARRIVED,
+  FORWARD,
+  TURN_LEFT,
+  TURN_RIGHT,
+  TURN_LITTLE_LEFT,
+  TURN_LITTLE_RIGHT,
+  TURN_AROUND
+};
+navigation_turn navigation;
 NeoGPS::Location_t homeLocation;
 static NMEAGPS gps;
 gps_fix fix;
-float distanceToHome;
-int courseChangeNeeded;
-char nav_dir = '~';
+
+int nav_dir = 0;
 
 // LoopTimer
 long loop_timer;
@@ -91,8 +101,38 @@ void loop() {
     xAngle = 0;
     ledManualMode();
   } else if (ch5 > 1700) { // Return to land
-    ledAngleMode();
+    ch1 = 1500;
+    ch2 = 1500;
     ch3 = 1030;
+
+    switch (navigation) {
+      case DO_NOTHING:
+        break;
+      case ARRIVED:
+        ch1 = 2000;
+        break;
+      case FORWARD:
+        break;
+      case TURN_LEFT:
+        ch1 = 1200;
+        break;
+      case TURN_RIGHT:
+        ch1 = 1800;
+        break;
+      case TURN_LITTLE_LEFT:
+        ch1 = 1300;
+        break;
+      case TURN_LITTLE_RIGHT:
+        ch1 = 1600;
+        break;
+      case TURN_AROUND:
+        ch1 = 2000;
+        break;
+    }
+
+    navigation = DO_NOTHING;
+
+    ledAngleMode();
   } else { // Angle Mode
     ledAngleMode();
   }
