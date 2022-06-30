@@ -1,5 +1,8 @@
 void debug() {
   #ifdef DEBUG
+  Serial.print(F(" [VOLTAGE] "));
+  Serial.print(voltage);
+  
   Serial.print(F(" [PITCH] "));
   Serial.print(yAngle);
   Serial.print(F(" [ROLL] "));
@@ -16,8 +19,6 @@ void debug() {
   Serial.print(F(" [CH5] "));
   Serial.print(ch5);
 
-  Serial.print(F(" [GPS OVERRUN] "));
-  Serial.print(gps.overrun());
   Serial.print(F(" [SATS] "));
   Serial.print(fix.satellites);
   Serial.print(F(" [LAT] "));
@@ -33,7 +34,7 @@ void debug() {
   Serial.print(F(" [COURSE] "));
   Serial.print(courseChangeNeeded);
   Serial.print(F(" [DIR] "));
-
+  Serial.print(nav_dir);
   Serial.println();
   #endif
 }
