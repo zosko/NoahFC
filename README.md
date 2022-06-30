@@ -6,7 +6,7 @@
 ### Features
 - [X] PPM
 - [X] GPS
-- [ ] Failsafe
+- [X] Failsafe
 - [X] Manual mode
 - [X] Stable mode
 - [ ] Return to home
