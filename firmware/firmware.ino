@@ -8,10 +8,9 @@
 //#define DEBUG
 
 // SERVOS
-const int PIN_ALERON =  9;
-const int PIN_ELEVATOR =  10;
-const int PIN_THROTTLE =  11;
-
+const int PIN_ALERON = 9;
+const int PIN_ELEVATOR = 10;
+const int PIN_THROTTLE = 11;
 ServoTimer2 servoThrottle;
 ServoTimer2 servoElevator;
 ServoTimer2 servoAleron;
@@ -21,7 +20,7 @@ int xAngle = 1500;
 int yAngle = 1500;
 
 // PPM
-const int PIN_PPM =  9;
+const int PIN_PPM =  3;
 PPMReader ppm(PIN_PPM, 5); // (InterruptPin, MaxChannels)
 unsigned int ch1 = 1500;
 unsigned int ch2 = 1500;
@@ -35,21 +34,31 @@ const float R1 = 100000.0;
 const float R2 = 10000.0;
 const int PIN_VOLTAGE = A2;
 
+// LEDS
+const int PIN_LED_MODE = 4;
+const int PIN_LED_GPS = 5;
+const int PIN_LED_POWER = 7;
+
 // GPS
 NeoGPS::Location_t homeLocation;
 static NMEAGPS gps;
 gps_fix fix;
 float distanceToHome;
 int courseChangeNeeded;
+char nav_dir = '~';
 
 // LoopTimer
 long loop_timer;
 
 void setup() {
-  #ifdef DEBUG
+#ifdef DEBUG
   Serial.begin(9600);
-  #endif
+#endif
   Wire.begin();
+
+  pinMode(PIN_LED_MODE, OUTPUT);
+  pinMode(PIN_LED_GPS, OUTPUT);
+  pinMode(PIN_LED_POWER, OUTPUT);
 
   gpsPort.attachInterrupt(GPSisr);
   gpsPort.begin(9600);
@@ -59,12 +68,15 @@ void setup() {
   pinMode(PIN_VOLTAGE, INPUT);
 
   ppm.channelValueMaxError = 100; // trashhold PPM for min / max
+  ppm.blankTime = 2200;
 
   servoAleron.attach(PIN_ALERON);
   servoElevator.attach(PIN_ELEVATOR);
   servoThrottle.attach(PIN_THROTTLE);
 
   loop_timer = micros();
+
+  blinkLeds();
 }
 
 void loop() {
@@ -73,12 +85,16 @@ void loop() {
   readMPU();
   readVoltage();
   debug();
-  
+
   if (ch5 < 1300) { // Manual
     yAngle = 0;
     xAngle = 0;
+    ledManualMode();
   } else if (ch5 > 1700) { // Return to land
-
+    ledAngleMode();
+    ch3 = 1030;
+  } else { // Angle Mode
+    ledAngleMode();
   }
 
   servoAleron.write(yAngle + ch1);
