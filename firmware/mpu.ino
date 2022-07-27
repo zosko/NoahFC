@@ -7,8 +7,8 @@ void readMPU() {
   int16_t AcX = Wire.read() << 8 | Wire.read();
   int16_t AcY = Wire.read() << 8 | Wire.read();
 
-  xAngle = AcX / 10.92;
-  yAngle = AcY / 10.92;
+  xAngle = AcX / 10.92; // 16384 / 10.92 = ~1500
+  yAngle = AcY / 10.92; // 16384 / 10.92 = ~1500
 }
 void setupMPU6050() {
   //Activate the MPU-6050

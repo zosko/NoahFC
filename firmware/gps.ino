@@ -22,16 +22,16 @@ void readGPS() {
         navigation = FORWARD;
       }
       else if (courseChangeNeeded >= 315 && courseChangeNeeded < 345) {
-        navigation = TURN_LITTLE_LEFT;
-      }
-      else if (courseChangeNeeded >= 15 && courseChangeNeeded < 45) {
         navigation = TURN_LITTLE_RIGHT;
       }
+      else if (courseChangeNeeded >= 15 && courseChangeNeeded < 45) {
+        navigation = TURN_LITTLE_LEFT;
+      }
       else if (courseChangeNeeded >= 255 && courseChangeNeeded < 315) {
-        navigation = TURN_LEFT;
+        navigation = TURN_RIGHT;
       }
       else if (courseChangeNeeded >= 45 && courseChangeNeeded < 105) {
-        navigation = TURN_RIGHT;
+        navigation = TURN_LEFT;
       }
       else {
         navigation = TURN_AROUND;

@@ -86,7 +86,7 @@ void setup() {
 
   loop_timer = micros();
 
-  blinkLeds();
+  ledStartup();
 }
 
 void loop() {
@@ -101,8 +101,8 @@ void loop() {
     xAngle = 0;
     ledManualMode();
   } else if (ch5 > 1700) { // Return to land
-    ch1 = 1500;
-    ch2 = 1500;
+    ch1 = 0;
+    ch2 = 0;
     ch3 = 1030;
 
     switch (navigation) {

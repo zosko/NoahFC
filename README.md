@@ -11,7 +11,7 @@
 - [X] Stable mode
 - [ ] Return to home
 - [X] Low cost
-- [ ] OSD (MAX7456 SPI)
+- [X] OSD
 
 ### Used Pins
 Arduino | Component
@@ -21,26 +21,19 @@ D1| UART (TX)
 D2| GPS RX (interrupt)
 D3| PPM Input (interrupt)
 D4| LED MODE
-D5| LED GPS
-D7| LED POWER
+D5| Throttle
+D6| Elevator
+D7| LED GPS
 D8| GPS TX
 D9| Alerons
-D10| Elevator
-D11| Throttle
+D10| CS (OSD)
+D11| MOSI (OSD)
+D12| MISO (OSD)
+D13| SCK (OSD)
 A2| Voltage read
-SDA| MPU6050
-SCL| MPU6050
+SDA| MPU6050, HMC5883L
+SCL| MPU6050, HMC5883L
 RST| DTR
-
-### Free Pins
-Arduino | Type
----------|---------
-A0| Analog pin
-A1| Analog pin
-A3| Analog pin
-D6| PWM Digital pin
-D12| Digital pin (MOSI)
-D13| Digital pin (SCK) 
 
 ## Scheme
 ![Scheme](images/scheme.png)

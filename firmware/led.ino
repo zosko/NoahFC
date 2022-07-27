@@ -1,4 +1,4 @@
-void blinkLeds() {
+void ledStartup() {
   digitalWrite(PIN_LED_MODE, HIGH);
   delay(200);
   digitalWrite(PIN_LED_MODE, LOW);
