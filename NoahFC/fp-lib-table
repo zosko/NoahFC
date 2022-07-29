@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "HMC5883L")(type "KiCad")(uri "${KIPRJMOD}/libs/HMC5883L")(options "")(descr ""))
+  (lib (name "MAX7456")(type "KiCad")(uri "${KIPRJMOD}/libs/MAX7456")(options "")(descr ""))
+)

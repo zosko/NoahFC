@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "HMC5883L")(type "Legacy")(uri "${KIPRJMOD}/libs/HMC5883L/HMC5883L.lib")(options "")(descr ""))
+  (lib (name "MAX7456EUI_")(type "Legacy")(uri "${KIPRJMOD}/libs/MAX7456/MAX7456EUI_.lib")(options "")(descr ""))
+)
