@@ -5,7 +5,14 @@
 #include <PPMReader.h>
 #include <ServoTimer2.h>
 
+#include <SPI.h>
+#include <max7456.h>
+
 //#define DEBUG
+
+// OSD
+Max7456 osd;
+byte tab[] = {0xC8, 0xC9};
 
 // SERVOS
 const int PIN_ALERON = 9;
@@ -18,6 +25,9 @@ ServoTimer2 servoAleron;
 //MPU6050
 int xAngle = 1500;
 int yAngle = 1500;
+
+//HMC5883L
+int headingDegrees = 0;
 
 // PPM
 const int PIN_PPM =  3;
@@ -64,6 +74,7 @@ void setup() {
 #ifdef DEBUG
   Serial.begin(9600);
 #endif
+  SPI.begin();
   Wire.begin();
 
   pinMode(PIN_LED_MODE, OUTPUT);
@@ -73,7 +84,9 @@ void setup() {
   gpsPort.attachInterrupt(GPSisr);
   gpsPort.begin(9600);
 
+  setupOSD();
   setupMPU6050();
+  setupHMC5883L();
 
   pinMode(PIN_VOLTAGE, INPUT);
 
@@ -93,7 +106,9 @@ void loop() {
   readPPM();
   readGPS();
   readMPU();
+  readHMC5883L();
   readVoltage();
+  showOSD_Data();
   debug();
 
   if (ch5 < 1300) { // Manual

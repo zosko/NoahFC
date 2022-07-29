@@ -2,6 +2,9 @@ void debug() {
   #ifdef DEBUG
   Serial.print(F(" [VOLTAGE] "));
   Serial.print(voltage);
+
+  Serial.print(F(" [HEADING] "));
+  Serial.print(headingDegrees);
   
   Serial.print(F(" [PITCH] "));
   Serial.print(yAngle);
