@@ -6,12 +6,13 @@
 ### Features
 - [X] PPM
 - [X] GPS
+- [X] Compass
 - [X] Failsafe
 - [X] Manual mode
 - [X] Stable mode
 - [ ] Return to home
-- [X] Low cost
 - [X] OSD
+- [X] Low cost
 
 ### Used Pins
 Arduino | Component
@@ -30,7 +31,7 @@ D10| CS (OSD)
 D11| MOSI (OSD)
 D12| MISO (OSD)
 D13| SCK (OSD)
-A2| Voltage read
+A0| Voltage read
 SDA| MPU6050, HMC5883L
 SCL| MPU6050, HMC5883L
 RST| DTR
@@ -38,15 +39,10 @@ RST| DTR
 ## Scheme
 ![Scheme](images/scheme.png)
 
-## Boards
-Board|PCB filled
+## Boards Preview
+Board|PCB
 ---------|---------
 ![Board](images/board.png)|![View 1](images/pcb.png)
-
-## Panels
-Board|PCB filled
----------|---------
-![Board](images/panel_board.png)|![View 1](images/panel.png)
 
 ## PCB Design
 
