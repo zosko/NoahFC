@@ -1283,7 +1283,6 @@
     )
   )
 
-
   (junction (at 237.49 81.28) (diameter 0) (color 0 0 0 0)
     (uuid 0d353ba8-20c5-41f3-9aed-ff2fb929692d)
   )
@@ -1361,6 +1360,7 @@
   (no_connect (at 228.6 119.38) (uuid 97795404-9bfd-4215-a044-1c311b4232cf))
   (no_connect (at 228.6 116.84) (uuid 97795404-9bfd-4215-a044-1c311b4232d0))
   (no_connect (at 254 142.24) (uuid 97795404-9bfd-4215-a044-1c311b4232d1))
+  (no_connect (at 161.29 54.61) (uuid b05d61b7-ac6e-4ca1-b121-0d133d86a1bc))
   (no_connect (at 58.42 133.35) (uuid b66296de-654d-49ab-b9c2-87bdf48d6794))
   (no_connect (at 86.36 49.53) (uuid b80d6fa9-e7f4-4c0c-9c93-581e1b804543))
   (no_connect (at 86.36 36.83) (uuid ca2d13bf-8774-4fc1-89c6-fda03c0fc3dd))
@@ -2999,7 +2999,7 @@
   )
 
   (symbol (lib_id "Connector:Conn_01x01_Female") (at 185.42 46.99 180) (unit 1)
-    (in_bom yes) (on_board yes) (fields_autoplaced)
+    (in_bom yes) (on_board yes)
     (uuid d8453b0e-ecdc-4ba2-82ca-cf14c1427fba)
     (property "Reference" "J5" (id 0) (at 184.15 48.2601 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
