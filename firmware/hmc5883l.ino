@@ -26,4 +26,15 @@ void readHMC5883L() {
     heading -= 2 * PI;
   }
   headingDegrees = heading * 180 / M_PI;
+
+}
+
+// int setpath = 100; //Defines Direction
+// int temp = azimuth - setpath;
+// int temp2 = 90 + temp;
+// myServo.write(temp2);
+
+float azimuth(int y, int x) {
+  float azimuth = atan2(y,x) * 180.0 / PI;
+  return azimuth < 0 ? 360 + azimuth : azimuth;
 }
