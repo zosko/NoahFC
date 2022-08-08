@@ -12,7 +12,6 @@
 
 // OSD
 Max7456 osd;
-byte tab[] = {0xC8, 0xC9};
 
 // SERVOS
 const int PIN_ALERON = 9;
@@ -152,8 +151,8 @@ void loop() {
     ledAngleMode();
   }
 
-  servoAleron.write(yAngle + ch1);
-  servoElevator.write(xAngle + ch2);
+  servoAleron.write(aleronPID());
+  servoElevator.write(elevatorPID());
   servoThrottle.write(ch3);
 
   while (micros() - loop_timer < 4000);  //Wait until the loop_timer reaches 4000us (250Hz) before starting the next loop
