@@ -4,14 +4,15 @@
 #include <Streamers.h>
 #include <PPMReader.h>
 #include <ServoTimer2.h>
+#include <SimpleKalmanFilter.h>
 
-#include <SPI.h>
-#include <max7456.h>
+//#include <SPI.h>
+//#include <max7456.h>
 
-//#define DEBUG
+#define DEBUG
 
 // OSD
-Max7456 osd;
+//Max7456 osd;
 
 // SERVOS
 const int PIN_ALERON = 9;
@@ -22,8 +23,20 @@ ServoTimer2 servoElevator;
 ServoTimer2 servoAleron;
 
 //MPU6050
-int xAngle = 1500;
-int yAngle = 1500;
+int pitchAngle = 0;
+int rollAngle = 0;
+SimpleKalmanFilter kalmanPitch(70, 70, 0.03);
+SimpleKalmanFilter kalmanRoll(70, 70, 0.03);
+
+float Cal_GyX,Cal_GyY,Cal_GyZ;
+float xAngle, yAngle, zAngle;
+const float alpha = 0.96;
+#define MPU6050_AXOFFSET 0
+#define MPU6050_AYOFFSET 0
+#define MPU6050_AZOFFSET 0
+#define MPU6050_GXOFFSET 0
+#define MPU6050_GYOFFSET 0
+#define MPU6050_GZOFFSET 0
 
 //HMC5883L
 int headingDegrees = 0;
@@ -39,8 +52,6 @@ unsigned int ch5 = 1500;
 
 // VOLTAGE READ
 float voltage = 0.0;
-const float R1 = 100000.0;
-const float R2 = 10000.0;
 const int PIN_VOLTAGE = A2;
 
 // LEDS
@@ -73,7 +84,7 @@ void setup() {
 #ifdef DEBUG
   Serial.begin(9600);
 #endif
-  SPI.begin();
+  //  SPI.begin();
   Wire.begin();
 
   pinMode(PIN_LED_MODE, OUTPUT);
@@ -111,8 +122,8 @@ void loop() {
   debug();
 
   if (ch5 < 1300) { // Manual
-    yAngle = 0;
-    xAngle = 0;
+    pitchAngle = 0;
+    rollAngle = 0;
     ledManualMode();
   } else if (ch5 > 1700) { // Return to land
     ch1 = 0;
@@ -151,8 +162,11 @@ void loop() {
     ledAngleMode();
   }
 
-  servoAleron.write(aleronPID());
-  servoElevator.write(elevatorPID());
+  float filteredPitch = kalmanPitch.updateEstimate(pitchAngle);
+  float filteredRoll = kalmanRoll.updateEstimate(rollAngle);
+
+  servoAleron.write(filteredPitch + ch1);
+  servoElevator.write(filteredRoll + ch2);
   servoThrottle.write(ch3);
 
   while (micros() - loop_timer < 4000);  //Wait until the loop_timer reaches 4000us (250Hz) before starting the next loop
