@@ -9,8 +9,6 @@
 //#include <SPI.h>
 //#include <max7456.h>
 
-#define DEBUG
-
 // OSD
 //Max7456 osd;
 
@@ -25,18 +23,12 @@ ServoTimer2 servoAleron;
 //MPU6050
 int pitchAngle = 0;
 int rollAngle = 0;
-SimpleKalmanFilter kalmanPitch(70, 70, 0.03);
-SimpleKalmanFilter kalmanRoll(70, 70, 0.03);
+SimpleKalmanFilter kalmanPitch(40, 40, 0.03);
+SimpleKalmanFilter kalmanRoll(40, 40, 0.03);
 
-float Cal_GyX,Cal_GyY,Cal_GyZ;
+float Cal_GyX, Cal_GyY, Cal_GyZ;
 float xAngle, yAngle, zAngle;
 const float alpha = 0.96;
-#define MPU6050_AXOFFSET 0
-#define MPU6050_AYOFFSET 0
-#define MPU6050_AZOFFSET 0
-#define MPU6050_GXOFFSET 0
-#define MPU6050_GYOFFSET 0
-#define MPU6050_GZOFFSET 0
 
 //HMC5883L
 int headingDegrees = 0;
@@ -81,34 +73,29 @@ int nav_dir = 0;
 long loop_timer;
 
 void setup() {
-#ifdef DEBUG
-  Serial.begin(9600);
-#endif
   //  SPI.begin();
   Wire.begin();
 
+  pinMode(PIN_VOLTAGE, INPUT);
   pinMode(PIN_LED_MODE, OUTPUT);
   pinMode(PIN_LED_GPS, OUTPUT);
   pinMode(PIN_LED_POWER, OUTPUT);
-
-  gpsPort.attachInterrupt(GPSisr);
-  gpsPort.begin(9600);
-
-  setupOSD();
-  setupMPU6050();
-  setupHMC5883L();
-
-  pinMode(PIN_VOLTAGE, INPUT);
-
-  ppm.channelValueMaxError = 100; // trashhold PPM for min / max
-  ppm.blankTime = 2200;
-
+  
   servoAleron.attach(PIN_ALERON);
   servoElevator.attach(PIN_ELEVATOR);
   servoThrottle.attach(PIN_THROTTLE);
 
+  gpsPort.attachInterrupt(GPSisr);
+  gpsPort.begin(9600);
+
+  ppm.channelValueMaxError = 100; // trashhold PPM for min / max
+  ppm.blankTime = 2200;
+
   loop_timer = micros();
 
+  setupOSD();
+  setupMPU6050();
+  setupHMC5883L();
   ledStartup();
 }
 
@@ -119,7 +106,6 @@ void loop() {
   readHMC5883L();
   readVoltage();
   showOSD_Data();
-  debug();
 
   if (ch5 < 1300) { // Manual
     pitchAngle = 0;

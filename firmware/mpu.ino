@@ -63,18 +63,18 @@ void readMPU() {
   float GAcY = (float) AcY / 4096.0;
   float GAcZ = (float) AcZ / 4096.0;
 
-  float acc_y = atan ((GAcY - (float)MPU6050_AYOFFSET/4096.0) / sqrt(GAcX * GAcX + GAcZ * GAcZ)) * 57.29577951; // 180 / PI = 57.29577951
-  float acc_x = - atan ((GAcX - (float)MPU6050_AXOFFSET/4096.0) / sqrt(GAcY * GAcY + GAcZ * GAcZ)) * 57.29577951; 
-  float acc_z = atan (sqrt(GAcX * GAcX + GAcZ * GAcZ) / (GAcZ - (float)MPU6050_AZOFFSET/4096.0)) * 57.29577951; 
+  float acc_y = atan (GAcY / sqrt(GAcX * GAcX + GAcZ * GAcZ)) * 57.29577951;
+  float acc_x = - atan (GAcX / sqrt(GAcY * GAcY + GAcZ * GAcZ)) * 57.29577951;
+  float acc_z = atan (GAcZ / sqrt(GAcX * GAcX + GAcZ * GAcZ)) * 57.29577951;
 
   // Calculate Pitch, Roll & Yaw from Gyroscope value reflected cumulative time factor
-  Cal_GyX += (float)(GyX - MPU6050_GXOFFSET) * 0.000244140625; // 2^15 / 2000 = 16.384, 250Hz, 1 /(250Hz * 16.384LSB)
-  Cal_GyY += (float)(GyY - MPU6050_GYOFFSET) * 0.000244140625; // 2^15 / 2000 = 16.384, 250Hz, 1 /(250Hz * 16.384LSB)
-  Cal_GyZ += (float)(GyZ - MPU6050_GZOFFSET) * 0.000244140625; // 2^15 / 2000 = 16.384, 250Hz, 1 /(250Hz * 16.384LSB)
+  Cal_GyX += GyX * 0.000244140625;
+  Cal_GyY += GyY * 0.000244140625;
+  Cal_GyZ += GyZ * 0.000244140625;
 
-  xAngle = alpha * (((float)(GyX - MPU6050_GXOFFSET) * 0.000244140625) + xAngle) + (1 - alpha) * acc_x;
-  yAngle = alpha * (((float)(GyY - MPU6050_GYOFFSET) * 0.000244140625) + yAngle) + (1 - alpha) * acc_y;
-  zAngle += (float)(GyZ - MPU6050_GZOFFSET) * 0.000244140625; // Accelerometer doesn't have yaw value
+  xAngle = alpha * ((GyX * 0.000244140625) + xAngle) + (1 - alpha) * acc_x;
+  yAngle = alpha * ((GyY * 0.000244140625) + yAngle) + (1 - alpha) * acc_y;
+  zAngle += GyZ * 0.000244140625;
 
   pitchAngle = (yAngle * 10) * -1;
   rollAngle = xAngle * 10;
