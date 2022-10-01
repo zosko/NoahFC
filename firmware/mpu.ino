@@ -76,6 +76,6 @@ void readMPU() {
   yAngle = alpha * ((GyY * 0.000244140625) + yAngle) + (1 - alpha) * acc_y;
   zAngle += GyZ * 0.000244140625;
 
-  pitchAngle = (yAngle * 10) * -1;
+  pitchAngle = (yAngle * 15) * -1;
   rollAngle = xAngle * 10;
 }

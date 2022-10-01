@@ -23,8 +23,8 @@ ServoTimer2 servoAleron;
 //MPU6050
 int pitchAngle = 0;
 int rollAngle = 0;
-SimpleKalmanFilter kalmanPitch(40, 40, 0.03);
-SimpleKalmanFilter kalmanRoll(40, 40, 0.03);
+SimpleKalmanFilter kalmanPitch(10, 10, 0.01);
+SimpleKalmanFilter kalmanRoll(10, 10, 0.01);
 
 float Cal_GyX, Cal_GyY, Cal_GyZ;
 float xAngle, yAngle, zAngle;
@@ -80,7 +80,7 @@ void setup() {
   pinMode(PIN_LED_MODE, OUTPUT);
   pinMode(PIN_LED_GPS, OUTPUT);
   pinMode(PIN_LED_POWER, OUTPUT);
-  
+
   servoAleron.attach(PIN_ALERON);
   servoElevator.attach(PIN_ELEVATOR);
   servoThrottle.attach(PIN_THROTTLE);
@@ -148,11 +148,11 @@ void loop() {
     ledAngleMode();
   }
 
-  float filteredPitch = kalmanPitch.updateEstimate(pitchAngle);
-  float filteredRoll = kalmanRoll.updateEstimate(rollAngle);
+  pitchAngle = kalmanPitch.updateEstimate(pitchAngle);
+  rollAngle = kalmanRoll.updateEstimate(rollAngle);
 
-  servoAleron.write(filteredPitch + ch1);
-  servoElevator.write(filteredRoll + ch2);
+  servoAleron.write(pitchAngle + ch1);
+  servoElevator.write(rollAngle + ch2);
   servoThrottle.write(ch3);
 
   while (micros() - loop_timer < 4000);  //Wait until the loop_timer reaches 4000us (250Hz) before starting the next loop
