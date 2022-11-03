@@ -1,7 +1,7 @@
 ## [warning] - In Development - [warning]
 
 # NoahFC
-- Atmega328 based Flight Controller.
+- Trying to make lowcost Atmega328 based Flight Controller with necessary features.
 
 ### Features
 - [X] PPM
