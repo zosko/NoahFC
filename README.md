@@ -44,6 +44,12 @@ Board|PCB
 ---------|---------
 ![Board](images/board.png)|![View 1](images/pcb.png)
 
+## Experimental
+![Scheme](images/experimental/scheme.png)
+Board|PCB
+---------|---------
+![Board](images/experimental/board.png)|![View 1](images/experimental/preview.png)
+
 ## PCB Design
 
 For PCB design i will use services from SeeedFusion. 
