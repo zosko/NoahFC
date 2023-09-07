@@ -10,12 +10,6 @@
     (effects (font (size 1 1) (thickness 0.15)))
     (tstamp c40a55a9-fd33-461f-a6e8-88c904457d7b)
   )
-  (fp_poly (pts
-      (xy -0.713 -1.675)
-      (xy 0.713 -1.675)
-      (xy 0.713 1.675)
-      (xy -0.713 1.675)
-    ) (layer "F.Paste") (width 0.01) (fill solid) (tstamp 4cf432a2-f036-4899-8ae9-c63aa7af9e21))
   (fp_line (start -2.25 4.9) (end 2.25 4.9) (layer "F.SilkS") (width 0.127) (tstamp 2d2aa188-5277-4f6c-8f5f-c01d25a30313))
   (fp_line (start -2.25 -4.9) (end 2.25 -4.9) (layer "F.SilkS") (width 0.127) (tstamp 53465243-7413-48fc-9443-efc758603b0c))
   (fp_circle (center -4.355 -4.635) (end -4.255 -4.635) (layer "F.SilkS") (width 0.2) (fill none) (tstamp 422bd661-c9d9-45e9-8e69-50b3e95d9438))
@@ -56,8 +50,7 @@
   (pad "26" smd roundrect (at 2.875 -2.925) (size 1.48 0.41) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.05) (tstamp 0ecc15ad-eef4-4a3a-ae55-2f7ee19655cd))
   (pad "27" smd roundrect (at 2.875 -3.575) (size 1.48 0.41) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.05) (tstamp 5964104b-e782-496f-9480-81aea8e4d8ed))
   (pad "28" smd roundrect (at 2.875 -4.225) (size 1.48 0.41) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.05) (tstamp 35e131f3-7b19-4449-ae98-5c5c159d06c3))
-  (pad "29" smd rect (at 0 0) (size 2.85 6.7) (layers "F.Cu" "F.Mask") (tstamp 8f112f27-3386-4938-a26a-03e9942ead21))
-  (model "${KIPRJMOD}/libs/MAX7456/MAX7456EUI_.step"
+  (model "${KIPRJMOD}/libs/MAX7456/MAX7456EUI.step"
     (offset (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz -90 0 0))
