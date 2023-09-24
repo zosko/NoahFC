@@ -14,6 +14,10 @@
 - [X] OSD
 - [X] Low cost
 
+
+## OSD
+![OSD](images/osd.jpg)
+
 ### Used Pins
 Arduino | Component
 ---------|---------
