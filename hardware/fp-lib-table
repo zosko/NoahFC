@@ -1,5 +1,4 @@
 (fp_lib_table
-  (lib (name "HMC5883L")(type "KiCad")(uri "${KIPRJMOD}/libs/HMC5883L")(options "")(descr ""))
+  (version 7)
   (lib (name "MAX7456")(type "KiCad")(uri "${KIPRJMOD}/libs/MAX7456")(options "")(descr ""))
 )
-/Users/bosko/Desktop/NoahFC/NoahFC/sym-lib-table

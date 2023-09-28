@@ -19,26 +19,17 @@
 ![OSD](images/osd.jpg)
 
 ### Used Pins
-Arduino | Component
----------|---------
-D0| UART RX
-D1| UART TX
-D2| GPS RX (interrupt)
-D3| PPM Input (interrupt)
-D4| LED MODE
-D5| Throttle
-D6| Elevator
-D7| LED GPS
-D8| GPS TX
-D9| Alerons
-D10| SS (OSD)
-D11| MOSI (OSD)
-D12| MISO (OSD)
-D13| SCK (OSD)
-A0| Voltage read
-SDA| MPU6050
-SCL| MPU6050
-RST| DTR
+Arduino | Component| | Arduino | Component
+---------|---------|---------|---------|---------
+D0| UART RX||D9| Alerons
+D1| UART TX||RST| DTR
+D2| GPS RX (interrupt)||D10| SS (OSD)
+D3| PPM Input (interrupt)||D11| MOSI (OSD)
+D4| LED MODE||D12| MISO (OSD)
+D5| Throttle||D13| SCK (OSD)
+D6| Elevator||A0| Voltage read
+D7| LED GPS||SDA| MPU6050
+D8| GPS TX||SCL| MPU6050
 
 ## Scheme
 ![Scheme](images/scheme.png)
@@ -56,10 +47,6 @@ Seeed Fusion PCB Assembly Service offers one-stop prototyping for PCB manufactur
 
 Check out their website to know about their manufacturing capabilities and service.
 https://www.seeedstudio.com/pcb-assembly.html
-
-Single PCB|Panel PCB
----------|---------
-![View 4](images/pcb-seed.jpg)|![View 5](images/pcb-panel-seed.jpg)
 
 ## Reasons to choose Seeed Studio
 - They provide PCB services at extremely low pricing and with excellent quality.
