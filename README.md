@@ -7,13 +7,12 @@
 - [X] **PPM**
 - [X] **GPS**
 - [X] **Compass**
-- [ ] **Failsafe**
+- [ ] Failsafe
 - [X] **Manual mode**
 - [X] **Stable mode**
-- [ ] **Return to home**
+- [ ] Return to home
 - [X] **OSD**
 - [X] **Low cost**
-
 
 ## OSD
 ![OSD](images/osd.jpg)
@@ -63,4 +62,3 @@ https://www.seeedstudio.com/pcb-assembly.html
 - They have a highly knowledgeable crew that leads their clients to avail deals and guides them about the costs and rates of different services.
 - A four-layer board with a comparable feature costs $5 for 10 pieces and is made in four days.
 - SMT stencil with size (10cm x 13cm) is available for $8.00 per piece.
-
