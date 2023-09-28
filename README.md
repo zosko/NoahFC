@@ -1,4 +1,4 @@
-## [warning] - In Development - [warning]
+## [warning] - In Development
 
 # NoahFC
 - Trying to make lowcost Atmega328 based Flight Controller with necessary features.
@@ -7,7 +7,7 @@
 - [X] PPM
 - [X] GPS
 - [X] Compass
-- [X] Failsafe
+- [ ] Failsafe
 - [X] Manual mode
 - [X] Stable mode
 - [ ] Return to home
@@ -21,8 +21,8 @@
 ### Used Pins
 Arduino | Component
 ---------|---------
-D0| UART (RX)
-D1| UART (TX)
+D0| UART RX
+D1| UART TX
 D2| GPS RX (interrupt)
 D3| PPM Input (interrupt)
 D4| LED MODE
@@ -47,12 +47,6 @@ RST| DTR
 Board|PCB
 ---------|---------
 ![Board](images/board.png)|![View 1](images/pcb.png)
-
-## Experimental
-![Scheme](images/experimental/scheme.png)
-Board|PCB
----------|---------
-![Board](images/experimental/board.png)|![View 1](images/experimental/preview.png)
 
 ## PCB Design
 
