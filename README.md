@@ -33,8 +33,8 @@ D8| GPS TX||SCL| MPU6050
 ### Firmware
 **Download**: [Firmware](firmware.hex)
 ```
-Sketch uses 24584 bytes (80%) of program storage space. Maximum is 30720 bytes.
-Global variables use 1151 bytes (56%) of dynamic memory, leaving 897 bytes for local variables. Maximum is 2048 bytes.
+Sketch uses 23196 bytes (75%) of program storage space. Maximum is 30720 bytes.
+Global variables use 1077 bytes (52%) of dynamic memory, leaving 971 bytes for local variables. Maximum is 2048 bytes.
 ```
 **Installation**:
 `avrdude -p m328 -c arduino -P /dev/ttyUSB0 -b 115200 -F -U flash:w:firmware.hex`
