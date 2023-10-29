@@ -3,16 +3,18 @@
 # NoahFC
 - Trying to make lowcost Atmega328 based Flight Controller with necessary features.
 
+# Testing on
+- [X] ZOHD Drift
+- [ ] Wing
+
 ### Features
 - [X] **PPM**
 - [X] **GPS**
-- [X] **Compass**
 - [ ] Failsafe
 - [X] **Manual mode**
 - [X] **Stable mode**
 - [ ] Return to home
 - [X] **OSD**
-- [X] **Low cost**
 
 ## OSD
 ![OSD](images/osd.jpg)
