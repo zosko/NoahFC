@@ -30,6 +30,15 @@ D6| Elevator||A0| Voltage read
 D7| LED GPS||SDA| MPU6050
 D8| GPS TX||SCL| MPU6050
 
+### Transmitter setup
+Channel | Info
+-----|-----
+CH1 | Elevator
+CH2 | Alerons
+CH3 | Throttle
+CH4 | Not used
+CH5 | Modes ( Manual, Stable, RTH )
+
 ### Firmware
 **Download**: [Firmware](firmware.hex)
 ```
