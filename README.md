@@ -1,7 +1,7 @@
 ## [warning] - In Development
 
 # NoahFC
-- Trying to make lowcost Atmega328 based Flight Controller with necessary features.
+- Trying to make low cost Atmega328 based Flight Controller with necessary features.
 
 # Testing on
 - [X] ZOHD Drift
@@ -16,21 +16,18 @@
 - [ ] Return to home
 - [X] **OSD**
 
-## OSD
-![OSD](images/osd.jpg)
-
 ### Used Pins
 Arduino | Component| | Arduino | Component
 ---------|---------|---------|---------|---------
 D0| UART RX||D9| Alerons
-D1| UART TX||RST| DTR
-D2| GPS RX (interrupt)||D10| SS (OSD)
-D3| PPM Input (interrupt)||D11| MOSI (OSD)
-D4| LED MODE||D12| MISO (OSD)
-D5| Throttle||D13| SCK (OSD)
-D6| Elevator||A0| Voltage read
-D7| LED GPS||SDA| MPU6050
-D8| GPS TX||SCL| MPU6050
+D1| UART TX||D10| SS (OSD)
+D2| GPS RX (interrupt)||D11| MOSI (OSD)
+D3| PPM Input (interrupt)||D12| MISO (OSD)
+D4| LED MODE||D13| SCK (OSD)
+D5| Throttle||SDA| MPU6050
+D6| Elevator||SCL| MPU6050
+D7| LED GPS||RST| DTR
+D8| GPS TX||
 
 ### Transmitter setup
 Channel | Info
@@ -38,8 +35,18 @@ Channel | Info
 CH1 | Elevator
 CH2 | Alerons
 CH3 | Throttle
-CH4 | Not used
-CH5 | Modes ( Manual, Stable, RTH )
+CH4 | N/A
+CH5 | Modes
+
+### Modes
+Channel 5 should be 3-position switch
+- Min [**Manual**]
+- Mid [**Stable**]
+- Max [**RTH**]
+
+### Leds
+- Blue blink when GPS signal received
+- Yellow lights when is in stable / rth mode
 
 ### Firmware
 **Download**: [Firmware](firmware.hex)
@@ -49,6 +56,9 @@ Global variables use 1077 bytes (52%) of dynamic memory, leaving 971 bytes for l
 ```
 **Installation**:
 `avrdude -p m328 -c arduino -P /dev/ttyUSB0 -b 115200 -F -U flash:w:firmware.hex`
+
+## OSD
+![OSD](images/osd.jpg)
 
 ## Scheme
 ![Scheme](images/scheme.png)
