@@ -1,4 +1,4 @@
-21930572254259503
+21928907525649909
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -54550,13 +54550,6 @@ Fuse Fuseholder TR5 Littelfuse/Wickmann No. 460 No560
 0
 2
 2
-HMC5883L
-LPCC-16
-<h3>16-Pin LCC (3 x 3 x 0.9 mm)</h3><p><a href="http://cdn.sparkfun.com/datasheets/Sensors/Magneto/HMC5883L-FDS.pdf">Datasheet</a></p><p>Specifications:<ul><li>Pin Count: 16</li><li>Area: 3.0 x 3.0 x 0.9 mm</li><li>Pitch: 0.5 mm</li></ul><p>Devices Using:</p><ul><li>HMC5883L</li></ul>
-
-0
-16
-16
 Heatsink
 Heatsink_35x26mm_1xFixation3mm_Fischer-SK486-35
 Heatsink, 35mm x 26mm, 1x Fixation 3mm, Fischer SK486-35
