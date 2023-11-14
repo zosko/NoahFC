@@ -66,7 +66,7 @@ Global variables use 1077 bytes (52%) of dynamic memory, leaving 971 bytes for l
 ## Boards Preview
 Board|PCB
 ---------|---------
-![Board](images/board.png)|![View 1](images/pcb.png)
+<img src="images/board.png" alt="Board" width="500"/>|<img src="images/pcb.png" alt="View 1" width="500"/>
 
 ## PCB Design
 
