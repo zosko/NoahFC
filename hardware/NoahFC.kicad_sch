@@ -5308,7 +5308,7 @@
 		)
 		(uuid "3740b00b-c641-4991-85b1-8ea5d213bab9")
 	)
-	(text_box "BEC"
+	(text_box "BEC to 5V"
 		(exclude_from_sim no)
 		(at 99.06 129.54 0)
 		(size 73.66 57.15)
