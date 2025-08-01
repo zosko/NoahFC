@@ -26,8 +26,7 @@ D3| PPM Input (interrupt)||D12| MISO (OSD)
 D4| LED MODE||D13| SCK (OSD)
 D5| Throttle||SDA| MPU6050
 D6| Elevator||SCL| MPU6050
-D7| LED GPS||RST| DTR
-D8| GPS TX||
+D8| GPS TX||RST| DTR
 
 ### Transmitter setup
 Channel | Info
