@@ -67,7 +67,20 @@ Board|PCB
 ---------|---------
 <img src="images/board.png" alt="Board" width="500"/>|<img src="images/pcb.png" alt="View 1" width="500"/>
 
-## PCB Fabrication
-AS hobby maker i have choose PCBWay, its fast fabrication for my PCBs with great quality. They are making really great quality products. I recommend this service for everyone.
+## Sponsorship
 
-Website: [https://www.pcbway.com](https://www.pcbway.com)
+![PCBWay_logo](images/pcbway_logo.png)
+
+**This project is proudly sponsored by [PCBWay](https://pcbway.com).**
+
+PCBWay specializes in manufacturing high-quality printed circuit boards (PCBs), making them accessible and affordable for both hobbyists and professionals.
+
+Their range of services includes:
+
+- PCB prototyping
+- Assembly services
+- Instant order quotations
+- Expert verification processes
+- A user-friendly, hassle-free ordering system
+
+I'm sincerely grateful to PCBWay for their generous support in making this project possible.
