@@ -1,5 +1,9 @@
 # NoahFC
-- Trying to make low cost Atmega328 based Flight Controller with necessary features.
+Open Hardware for Smarter Flight
+
+Modular, open-source flight controller ecosystem with integrated BEC and ESC designs. Build, customize, and fly freely.
+
+#### Based low cost Atmega328 based Flight Controller with necessary features.
 
 # Electronic used
 - Flight Controller - [NoahFC](https://github.com/zosko/NoahFC)
