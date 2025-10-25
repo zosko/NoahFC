@@ -1,7 +1,7 @@
 # NoahFC
 Open Hardware for Smarter Flight
 
-Modular, open-source flight controller ecosystem with integrated BEC and ESC designs. Build, customize, and fly freely.
+Modular, open-source flight controller with integrated BEC and ESC designs. Build, customize, and fly freely.
 
 #### Based low cost Atmega328 based Flight Controller with necessary features.
 
@@ -29,10 +29,9 @@ D0| UART RX| D9| Alerons
 D1| UART TX| D10 | SS (OSD)
 D2| GPS RX | D11 | MOSI (OSD)
 D3| PPM Input | D12 | MISO (OSD)
-D4| LED MODE | D13 | SCK (OSD)
-D5| Throttle | SDA | MPU6050
-D6| Elevator | SCL | MPU6050
-D8| GPS TX | RST | DTR
+D5| Throttle | D13 | SCK (OSD)
+D6| Elevator | SDA | MPU6050
+D8| GPS TX | SCL | MPU6050
 
 ### Transmitter setup
 Channel | Info
