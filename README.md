@@ -19,7 +19,7 @@ Modular, open-source flight controller with integrated BEC and ESC designs. Buil
 - [X] **GPS**
 - [X] **Manual mode**
 - [X] **Stable mode**
-- [in progress] Return to home
+- [ ] Return to home
 - [X] **OSD**
 
 ### Used Pins
