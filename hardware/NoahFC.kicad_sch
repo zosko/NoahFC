@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "NoahFC")
-		(rev "7")
+		(rev "8")
 	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x01_Socket"
@@ -122,6 +122,171 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector:Conn_01x02_Socket"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02_Socket"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x02_Socket_1_1"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.508 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -0.508 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -0.508)
+					(mid -0.5058 0)
+					(end 0 0.508)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -3.048)
+					(mid -0.5058 -2.54)
+					(end 0 -2.032)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3894,14 +4059,14 @@
 		)
 		(uuid "0c04bab2-4696-4b13-a29c-a5d25ce3a616")
 	)
-	(text_box "MAX7456 / AT7456"
+	(text_box "AT7456"
 		(exclude_from_sim no)
 		(at 29.21 16.51 0)
 		(size 111.76 71.12)
 		(margins 2 2 2 2)
 		(stroke
 			(width 1)
-			(type default)
+			(type solid)
 		)
 		(fill
 			(type none)
@@ -3916,14 +4081,14 @@
 		)
 		(uuid "3740b00b-c641-4991-85b1-8ea5d213bab9")
 	)
-	(text_box "BEC to 5V"
+	(text_box "VCC to 5V"
 		(exclude_from_sim no)
 		(at 109.22 125.73 0)
 		(size 54.61 39.37)
 		(margins 2 2 2 2)
 		(stroke
 			(width 1)
-			(type default)
+			(type solid)
 		)
 		(fill
 			(type none)
@@ -4155,10 +4320,6 @@
 		(uuid "6c059490-3bdf-4f1b-ac9b-37be0a0cc328")
 	)
 	(no_connect
-		(at 43.18 49.53)
-		(uuid "717300eb-b1bb-4aa3-a6fb-ebbb7bcc4112")
-	)
-	(no_connect
 		(at 227.33 93.98)
 		(uuid "7312c19e-17e3-4e35-8ca9-5a78f3596021")
 	)
@@ -4193,10 +4354,6 @@
 	(no_connect
 		(at 71.12 158.75)
 		(uuid "ede935d9-5e01-4472-bb4d-d8bc77815bbb")
-	)
-	(no_connect
-		(at 43.18 59.69)
-		(uuid "ee6ee9f0-9e93-4fc7-8520-53303c8c89e0")
 	)
 	(wire
 		(pts
@@ -5006,6 +5163,28 @@
 			)
 		)
 	)
+	(global_label "THROTTLE"
+		(shape input)
+		(at 189.23 152.4 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0e27ab70-8058-48c1-a89f-0b2f65cf4ccd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 177.8059 152.3206 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "VOLTAGE"
 		(shape input)
 		(at 227.33 63.5 0)
@@ -5028,24 +5207,24 @@
 			)
 		)
 	)
-	(global_label "THROTTLE"
+	(global_label "GND"
 		(shape input)
-		(at 189.23 153.67 180)
+		(at 43.18 49.53 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
-		(uuid "0f9ee587-16e0-47f4-b40b-3ee94b037e76")
+		(uuid "0fbc2f7e-3cd1-4c7f-8863-7a58eca7d830")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 177.8059 153.5906 0)
+			(at 43.18 42.6743 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -5217,6 +5396,28 @@
 		(uuid "20640374-9a24-4a36-947c-945bf6d56a40")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 205.4157 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape input)
+		(at 43.18 59.69 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2afd67aa-4fb2-420a-b910-a2c3fb5483d1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 43.18 66.5457 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5534,28 +5735,6 @@
 			)
 		)
 	)
-	(global_label "GND"
-		(shape input)
-		(at 189.23 149.86 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "4a18e657-10b6-4a30-a75e-a57fd2ac83c0")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 182.9464 149.7806 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SCL"
 		(shape input)
 		(at 227.33 68.58 0)
@@ -5574,6 +5753,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BEC_5V"
+		(shape input)
+		(at 187.96 143.51 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4fa81b6f-129f-4f73-81e5-1478d2ced89f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 178.0201 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -5952,28 +6153,6 @@
 			)
 		)
 	)
-	(global_label "GND"
-		(shape input)
-		(at 186.69 144.78 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "82decb1c-6898-4d3f-9c5a-8e8f3380739b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 179.8343 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "XTAL2"
 		(shape input)
 		(at 260.35 64.77 180)
@@ -6218,6 +6397,28 @@
 	)
 	(global_label "GND"
 		(shape input)
+		(at 189.23 149.86 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "91d7cb9a-51f8-4783-bead-c1003ec8a45c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 182.9464 149.7806 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape input)
 		(at 241.3 147.32 180)
 		(fields_autoplaced yes)
 		(effects
@@ -6273,28 +6474,6 @@
 		(uuid "9651b6d9-958a-4703-89c4-aa969acb9163")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 16.3345 158.8294 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "BEC_5V"
-		(shape input)
-		(at 186.69 140.97 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "97f5444a-a208-4b57-917c-d8ac1cbc014a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 176.7501 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6740,6 +6919,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape input)
+		(at 187.96 140.97 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ba48bcf4-7349-47dc-ad32-0ba10b02af7f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 181.1043 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -7251,6 +7452,86 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x02_Socket")
+		(at 194.31 149.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0017068d-d602-4351-90d2-99ae113d9a30")
+		(property "Reference" "J15"
+			(at 195.58 149.8599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "ESC_PWM"
+			(at 195.58 151.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical"
+			(at 194.31 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 194.31 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 194.31 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C7501607"
+			(at 194.31 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5e02f29e-1d0b-4564-b494-90fecb1e8fcc")
+		)
+		(pin "1"
+			(uuid "e18717be-25d4-4454-9fc4-8328b86465e2")
+		)
+		(instances
+			(project "NoahFC"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "J15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 149.86 146.05 180)
 		(unit 1)
@@ -7303,6 +7584,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C28323"
+			(at 149.86 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3759b57b-e232-4cc8-bb4e-82eb93b619b5")
 		)
@@ -7336,8 +7626,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "XC6206P332MR"
-			(at 62.23 100.33 0)
+		(property "Value" "XC6206"
+			(at 59.69 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7364,6 +7654,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 59.69 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C3015484"
 			(at 59.69 105.41 0)
 			(effects
 				(font
@@ -7446,6 +7745,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C42431836"
+			(at 273.05 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fe82d0d7-032b-4c1f-a5fd-cfbc1dc26f4a")
 		)
@@ -7512,6 +7820,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 273.05 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C42431836"
 			(at 273.05 124.46 0)
 			(effects
 				(font
@@ -7658,6 +7975,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C28323"
+			(at 71.12 109.22 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "70e690d9-bc61-4fb4-bac0-8e7081b3bb15")
 		)
@@ -7720,6 +8046,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 53.34 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C24112"
 			(at 53.34 166.37 0)
 			(effects
 				(font
@@ -7862,6 +8197,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C49678"
+			(at 74.93 179.07 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "482fc4b2-e9d9-42fa-b3c9-2f6372fa80d5")
 		)
@@ -7930,6 +8274,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C49678"
+			(at 55.88 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1fdb77d3-f31c-4771-9bd1-ef4a53a146b9")
 		)
@@ -7991,6 +8344,15 @@
 		)
 		(property "Description" ""
 			(at 140.97 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2933415"
+			(at 140.97 110.49 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8135,6 +8497,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C49678"
+			(at 115.57 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8204cae7-8570-470c-8140-264c9f13af29")
 		)
@@ -8145,73 +8516,6 @@
 			(project "NoahFC"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x01_Socket")
-		(at 191.77 140.97 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4da32ead-53bf-4ade-beee-aee602efb750")
-		(property "Reference" "J15"
-			(at 193.04 139.6999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "BEC+"
-			(at 192.786 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
-			(at 191.77 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 191.77 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ff928f4d-9e27-4e30-a5ac-5cd852b15f29")
-		)
-		(instances
-			(project "NoahFC"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "J15")
 					(unit 1)
 				)
 			)
@@ -8339,6 +8643,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C17673"
+			(at 27.94 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7ec401f3-12aa-4fb7-91af-0910a55d7c5a")
 		)
@@ -8373,7 +8686,7 @@
 			)
 		)
 		(property "Value" "27Mhz"
-			(at 43.18 48.26 0)
+			(at 36.576 50.038 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8399,6 +8712,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 43.18 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C5444552"
 			(at 43.18 54.61 0)
 			(effects
 				(font
@@ -8483,6 +8805,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C17673"
+			(at 27.94 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f7d6c746-855c-48a8-8614-a37dd933b7ec")
 		)
@@ -8544,6 +8875,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 52.07 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C131173"
 			(at 52.07 35.56 0)
 			(effects
 				(font
@@ -8622,6 +8962,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2974040"
+			(at 113.03 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3ef19204-9888-4923-b0b4-f1785f49f03b")
 		)
@@ -8685,6 +9034,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 246.38 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C160391"
 			(at 246.38 144.78 0)
 			(effects
 				(font
@@ -8770,6 +9128,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C17713"
+			(at 133.35 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3dced2ac-5156-4540-b8d6-ea7f29d1b439")
 		)
@@ -8833,6 +9200,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 212.09 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C618731"
 			(at 212.09 63.5 0)
 			(effects
 				(font
@@ -8999,6 +9375,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C17572"
+			(at 144.78 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3e9ee141-4c80-4369-a7f7-93710c5d2635")
 		)
@@ -9059,6 +9444,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 137.16 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C114546"
 			(at 137.16 151.13 0)
 			(effects
 				(font
@@ -9135,6 +9529,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C28260"
+			(at 74.93 171.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "358eb992-47a2-4ca2-ab43-9ed6662723af")
 		)
@@ -9145,74 +9548,6 @@
 			(project "NoahFC"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "C9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x01_Socket")
-		(at 194.31 149.86 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8330aa61-e021-4fe6-8cba-35300e364177")
-		(property "Reference" "J13"
-			(at 195.58 148.5899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "ESC_GND"
-			(at 195.58 149.8599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 194.31 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 194.31 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 194.31 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6d810126-ba50-4bd4-9081-8b377a1b27b8")
-		)
-		(instances
-			(project "NoahFC"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "J13")
 					(unit 1)
 				)
 			)
@@ -9264,6 +9599,15 @@
 		)
 		(property "Description" ""
 			(at 260.35 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C84376"
+			(at 260.35 33.02 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9408,6 +9752,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C42431836"
+			(at 223.52 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e771f026-e23b-4a78-86c2-6b236ae6e20f")
 		)
@@ -9473,6 +9826,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 107.95 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C49678"
 			(at 107.95 26.67 0)
 			(effects
 				(font
@@ -9564,73 +9926,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x01_Socket")
-		(at 191.77 144.78 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "999bcbff-10da-4d8e-a4b0-26736fa108a9")
-		(property "Reference" "J16"
-			(at 193.04 143.5099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "BEC-"
-			(at 192.786 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
-			(at 191.77 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 191.77 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "10c447d8-60b0-46fc-a35e-f07a4a8c1c33")
-		)
-		(instances
-			(project "NoahFC"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "J16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:Conn_01x03_Socket")
 		(at 223.52 124.46 0)
 		(unit 1)
@@ -9678,6 +9973,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 223.52 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C42431836"
 			(at 223.52 124.46 0)
 			(effects
 				(font
@@ -9751,6 +10055,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 59.69 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2974040"
 			(at 59.69 31.75 0)
 			(effects
 				(font
@@ -9895,6 +10208,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C49678"
+			(at 130.81 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a88b210a-baa8-4d71-be3b-cb2e3093c5b1")
 		)
@@ -9956,6 +10278,15 @@
 		)
 		(property "Description" ""
 			(at 50.8 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C1710"
+			(at 50.8 144.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10032,6 +10363,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C131173"
+			(at 52.07 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b9f0e3da-1723-479a-b36f-5683a583c46e")
 		)
@@ -10042,6 +10382,86 @@
 			(project "NoahFC"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "C18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Socket")
+		(at 193.04 140.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d2697585-97bd-4ac7-a009-15bb6925022e")
+		(property "Reference" "J17"
+			(at 194.31 140.9699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "BEC"
+			(at 194.31 142.2399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 193.04 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 193.04 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 193.04 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C42431798"
+			(at 193.04 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6c8cfec7-ac66-4ec7-a73e-2cfd4bd171aa")
+		)
+		(pin "1"
+			(uuid "c05d0503-ec5d-4c9d-b6b3-8dfcd8ad2c35")
+		)
+		(instances
+			(project ""
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "J17")
 					(unit 1)
 				)
 			)
@@ -10094,6 +10514,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 123.19 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C49678"
 			(at 123.19 59.69 0)
 			(effects
 				(font
@@ -10165,6 +10594,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 222.25 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C160390"
 			(at 222.25 146.05 0)
 			(effects
 				(font
@@ -10247,6 +10685,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C49678"
+			(at 125.73 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "94efca65-bfbb-450d-8714-5dc4d83b33c3")
 		)
@@ -10257,74 +10704,6 @@
 			(project "NoahFC"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "C5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x01_Socket")
-		(at 194.31 153.67 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d9c52e19-3af8-478b-8e46-06ba237f020b")
-		(property "Reference" "J14"
-			(at 195.58 152.3999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "ESC_PWM"
-			(at 195.58 153.6699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 194.31 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 194.31 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 194.31 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1dae4eb0-5d48-4dec-90aa-d2e4841e033e")
-		)
-		(instances
-			(project "NoahFC"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "J14")
 					(unit 1)
 				)
 			)
@@ -10378,6 +10757,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 246.38 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C42431836"
 			(at 246.38 127 0)
 			(effects
 				(font
@@ -10457,6 +10845,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C94121"
+			(at 260.35 36.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f1a967d3-c7dc-43bf-a5e3-ac0f26f13596")
 		)
@@ -10491,7 +10888,7 @@
 				)
 			)
 		)
-		(property "Value" "MAX7456EUI+"
+		(property "Value" "AT7456"
 			(at 81.28 36.83 0)
 			(effects
 				(font
@@ -10520,6 +10917,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 81.28 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C82351"
 			(at 81.28 62.23 0)
 			(effects
 				(font
@@ -10653,6 +11059,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C42431836"
+			(at 273.05 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "984a1f61-8ca4-48ad-8837-9022672fc30a")
 		)
@@ -10726,6 +11141,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C882606"
+			(at 260.35 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fe6a19ee-5c0c-4c47-9cff-66a3e62e42fd")
 		)
@@ -10762,7 +11186,7 @@
 				)
 			)
 		)
-		(property "Value" "LM317_SOT-223"
+		(property "Value" "LM317"
 			(at 137.16 133.35 0)
 			(effects
 				(font
@@ -10790,6 +11214,15 @@
 			)
 		)
 		(property "Description" "1.5A 35V Adjustable Linear Regulator, SOT-223"
+			(at 137.16 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C68487"
 			(at 137.16 137.16 0)
 			(effects
 				(font
@@ -10862,6 +11295,15 @@
 		)
 		(property "Description" ""
 			(at 48.26 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C28323"
+			(at 48.26 109.22 90)
 			(effects
 				(font
 					(size 1.27 1.27)
