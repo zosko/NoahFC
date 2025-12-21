@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.0,
+          "height": 0.5,
+          "width": 1.0
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -59,7 +59,32 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "lib_footprint_mismatch|66900000|82900000|b39b8f28-c952-4f6a-95ca-9a8cc374b3b2|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|67500000|94000000|3c7fda08-bf58-49c5-9606-2e8fcf061bc2|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|76100000|97700000|e50008a1-a58b-422a-9ebf-37a8e32f1c9f|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|79000000|95200000|cdef54c1-4775-4319-b1ae-96b35109209b|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|80200000|97800000|124dbdcd-dfa2-4ac5-a3ee-09fff65116d7|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|87300000|93200000|53594794-1b66-4a88-8298-01198e1c4de0|00000000-0000-0000-0000-000000000000",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -509,7 +534,7 @@
       "idf": "",
       "netlist": "../../../../../Applications/KiCad/KiCad.app/Contents/Applications/",
       "plot": "./gerbers",
-      "pos_files": "",
+      "pos_files": "./pick-and-place",
       "specctra_dsn": "",
       "step": "",
       "svg": "",
