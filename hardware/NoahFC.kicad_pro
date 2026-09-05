@@ -51,7 +51,23 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.2
+          "border_display_style": 2,
+          "border_hatch_pitch": 0.5,
+          "corner_radius": 0.0,
+          "corner_smoothing": 0,
+          "fill_mode": 0,
+          "hatch_gap": 1.5,
+          "hatch_orientation": 0.0,
+          "hatch_smoothing_level": 0,
+          "hatch_smoothing_value": 0.1,
+          "hatch_thickness": 1.0,
+          "min_clearance": 0.2,
+          "min_island_area": 10.0,
+          "min_thickness": 0.25,
+          "pad_connection": 1,
+          "remove_islands": 0,
+          "thermal_relief_gap": 0.5,
+          "thermal_relief_spoke_width": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -71,6 +87,10 @@
           ""
         ],
         [
+          "lib_footprint_mismatch|67900000|113300000|c08b2ada-6d46-4912-92d8-13998c47253e|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
           "lib_footprint_mismatch|76100000|97700000|e50008a1-a58b-422a-9ebf-37a8e32f1c9f|00000000-0000-0000-0000-000000000000",
           ""
         ],
@@ -84,6 +104,10 @@
         ],
         [
           "lib_footprint_mismatch|87300000|93200000|53594794-1b66-4a88-8298-01198e1c4de0|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|89100000|112850000|046ff337-5ecf-4046-b3ec-d2b24cf34383|00000000-0000-0000-0000-000000000000",
           ""
         ]
       ],
@@ -269,7 +293,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "9"
+      "sch_revision": "10"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -707,7 +731,7 @@
         "uuid": "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
       }
     ],
-    "used_designators": "JP1-2",
+    "used_designators": "#FLG3,JP1-2",
     "variants": []
   },
   "sheets": [

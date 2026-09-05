@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "NoahFC")
-		(rev "9")
+		(rev "10")
 	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x01_Socket"
@@ -5247,7 +5247,7 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 177.8) (xy 34.29 172.72)
+			(xy 34.29 172.72) (xy 34.29 177.8)
 		)
 		(stroke
 			(width 0)

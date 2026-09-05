@@ -19,7 +19,7 @@ Modular, open-source flight controller with integrated BEC and ESC designs. Buil
 - [X] **GPS**
 - [X] **Manual mode**
 - [X] **Stable mode**
-- [ ] Return to home
+- [X] Return to home
 - [X] **OSD**
 
 ### Used Pins
@@ -30,8 +30,8 @@ D1| UART TX| D10 | SS (OSD)
 D2| GPS RX | D11 | MOSI (OSD)
 D3| PPM Input | D12 | MISO (OSD)
 D5| Throttle | D13 | SCK (OSD)
-D6| Elevator | SDA | MPU6050
-D8| GPS TX | SCL | MPU6050
+D6| Elevator | SDA | IMU
+D8| GPS TX | SCL | IMU
 
 ### Transmitter setup
 Channel | Info
@@ -56,8 +56,8 @@ Channel 5 should be 3-position switch
 ### Firmware
 **Download**: [Firmware](firmware.hex)
 ```
-Sketch uses 23570 bytes (76%) of program storage space. Maximum is 30720 bytes.
-Global variables use 1185 bytes (57%) of dynamic memory, leaving 863 bytes for local variables. Maximum is 2048 bytes.
+Sketch uses 28472 bytes (92%) of program storage space. Maximum is 30720 bytes.
+Global variables use 1267 bytes (61%) of dynamic memory, leaving 781 bytes for local variables. Maximum is 2048 bytes.
 ```
 **Installation**:
 `avrdude -p m328 -c arduino -P /dev/ttyUSB0 -b 115200 -F -U flash:w:firmware.hex`
